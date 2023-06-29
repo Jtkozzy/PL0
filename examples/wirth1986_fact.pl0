@@ -1,0 +1,15 @@
+var x, y, z, q, r, n, f;
+
+procedure fact;
+begin
+  if n > 1 then
+  begin
+    f := n * f;
+    n := n - 1;
+    call fact
+  end
+end;
+
+begin
+  ?n; f := 1; call fact; !f
+end.

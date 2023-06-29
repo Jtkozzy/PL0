@@ -1,0 +1,32 @@
+var x;
+
+procedure a;
+var a;
+  procedure b;
+  var b;
+    procedure c;
+    var c;
+    begin
+      x := x + 1;
+      ! x;
+      c := 4;
+      ! x-a*b*c;
+    end;
+  begin
+    x := x + 1;
+    ! x;
+    b := 3;
+    call c;
+  end;      
+begin
+  x := x + 1;
+  ! x;
+  a := 2;
+  call b;
+end;
+
+begin
+  x := 1;
+  ! x;
+  call a;
+end.

@@ -1,0 +1,35 @@
+const max = 2000;
+var i, arg, ret, numpr;
+
+procedure isprim;
+var t;
+begin
+   ret := 1;
+   i := 2;
+   while i < arg do begin
+      if arg / i * i = arg then begin
+         ret := 0;
+         i := arg
+      end;
+      i := i + 1
+   end;
+end;
+
+procedure primes;
+begin
+   numpr := 0;
+   arg := 2;
+   while arg < max do begin
+      call isprim;
+      if ret = 1 then begin
+         ! arg;
+         numpr := numpr + 1
+      end;
+      arg := arg + 1
+   end;
+end;
+
+begin
+   call primes
+end.
+

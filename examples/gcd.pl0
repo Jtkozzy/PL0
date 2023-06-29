@@ -1,0 +1,21 @@
+var
+  x, y, res;
+
+procedure gcd;
+var f, g;
+begin
+  f := x;
+  g := y;
+  while f # g do begin
+    if f < g then g := g - f;
+    if g < f then f := f - g
+  end;
+  res := f;
+  ! res;
+end;
+
+begin
+  x := 168;
+  y := 72;
+  call gcd
+end.
